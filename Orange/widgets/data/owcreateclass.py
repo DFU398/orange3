@@ -6,7 +6,7 @@ from typing import Optional, Sequence
 import numpy as np
 
 from AnyQt.QtWidgets import QGridLayout, QLabel, QLineEdit, QSizePolicy, QWidget
-from AnyQt.QtCore import Qt
+from AnyQt.QtCore import Qt , QTimer
 
 from Orange.data import StringVariable, DiscreteVariable, Domain
 from Orange.data.table import Table
@@ -331,6 +331,8 @@ class OWCreateClass(widget.OWWidget):
         # TODO: Resizing upon changing the number of rules does not work
         self.setSizePolicy(QSizePolicy.Preferred, QSizePolicy.Maximum)
 
+
+
     @property
     def active_rules(self):
         """
@@ -426,6 +428,9 @@ class OWCreateClass(widget.OWWidget):
         while len(self.line_edits) > n:
             _remove_line()
         _fix_tab_order()
+
+        QTimer.singleShot(0, self.adjustSize)
+
 
     def add_row(self):
         """Append a new row at the end."""
