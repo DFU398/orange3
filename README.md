@@ -209,3 +209,19 @@ The Distributions widget now includes additional customization options within th
 
 Like all other View Options, these settings are fully preserved and saved when saving a workflow file (`.ows`).
 
+### Before
+
+The original View Options dialog had no way to set a custom title or axis labels:
+
+![View Options before](docs/screenshots/before_dialog_original.png)
+
+### After
+
+The new dialog includes a **Title** font row and a full **Annotations** section:
+
+![View Options after](docs/screenshots/view_options_dialog.png)
+
+Custom title and axis labels applied to the plot:
+
+![Plot with custom labels](docs/screenshots/after_custom_labels.png)
+
