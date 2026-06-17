@@ -1,6 +1,7 @@
 # Build files
 build
 dist
+.venv
 Orange3.egg-info
 Orange/version.py
 doc/build
