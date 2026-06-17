@@ -195,3 +195,17 @@ pip install -e orange3
 ```
 
 It's crucial to install `orange-base-widget` and `orange-canvas-core` before `orange3` to ensure that `orange3` will use your local versions.
+
+
+
+
+## New Feature: Custom Labels and Fonts in Distributions Widget
+
+The Distributions widget now includes additional customization options within the View Options dialog (the gear icon on the top right of the plot toolbar), bringing it in line with the Line Plot, Bar Plot, and Violin Plot widgets:
+
+**Custom Plot Title**: Under `Annotations` → `Title`, you can enter any custom title to display above the chart. If the field is left empty, no title will be shown.
+**Custom Axis Titles**: Under `Annotations` → `x-axis title` / `y-axis title`, you can freely define custom labels for both axes. If left empty, the widget will automatically default to the selected variable name (for the x-axis) or "Frequency" (for the y-axis).
+**Title Font Customization**: Under `Fonts` → `Title`, you can modify the font family, size, and style of the plot title.
+
+Like all other View Options, these settings are fully preserved and saved when saving a workflow file (`.ows`).
+
